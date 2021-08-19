@@ -1,3 +1,22 @@
+body {
+  font-family: sans-serif;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 30vw;
+
+  margin: auto;
+  padding: 30px;
+}
+
+form > label {
+  padding-top: 30px;
+  padding-bottom: 8px;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -5,4 +24,20 @@
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.hidden {
+  display: none;
+}
+
+.organizer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.organizer > div {
+  margin: 10px;
+  border-radius: 10px;
 }
