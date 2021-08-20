@@ -8,7 +8,7 @@
     <title>Dia 3</title>
   </head>
   <body>
-    <form>
+    <form data-js="color-form">
       <label for="name">Name</label>
       <input type="text" id="name" data-js="name" />
     </form>
@@ -23,7 +23,7 @@
       <input type="text" id="modelo" data-js="modelo" />
 
       <label for="ano">Ano</label>
-      <select id="ano" data-js="ano"></select>
+      <input type="number" id="ano" data-js="ano" />
 
       <label for="placa">Placa</label>
       <input type="text" id="placa" data-js="placa" />
@@ -34,14 +34,17 @@
       <button type="submit" data-js="submit">Enviar</button>
     </form>
     <table data-js="table">
-      <tr>
-        <th>URL</th>
-        <th>marca</th>
-        <th>modelo</th>
-        <th>ano</th>
-        <th>placa</th>
-        <th>cor</th>
-      </tr>
+      <thead>
+        <tr>
+          <th>URL</th>
+          <th>Marca</th>
+          <th>Modelo</th>
+          <th>Ano</th>
+          <th>Placa</th>
+          <th>Cor</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
     </table>
     <script type="module" src="/src/main.js"></script>
   </body>
