@@ -10,8 +10,39 @@
   <body>
     <form>
       <label for="name">Name</label>
-      <input type="text" id="name" data-js="name"/>
+      <input type="text" id="name" data-js="name" />
     </form>
+    <form data-js="car-form">
+      <label for="url">Imagem (URL)</label>
+      <input type="url" id="url" data-js="url" />
+
+      <label for="marca">Marca</label>
+      <input type="text" id="marca" data-js="marca" />
+
+      <label for="modelo">Modelo</label>
+      <input type="text" id="modelo" data-js="modelo" />
+
+      <label for="ano">Ano</label>
+      <select id="ano" data-js="ano"></select>
+
+      <label for="placa">Placa</label>
+      <input type="text" id="placa" data-js="placa" />
+
+      <label for="cor">Cor</label>
+      <input type="text" id="cor" data-js="cor" />
+
+      <button type="submit" data-js="submit">Enviar</button>
+    </form>
+    <table data-js="table">
+      <tr>
+        <th>URL</th>
+        <th>marca</th>
+        <th>modelo</th>
+        <th>ano</th>
+        <th>placa</th>
+        <th>cor</th>
+      </tr>
+    </table>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

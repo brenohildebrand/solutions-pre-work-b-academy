@@ -84,7 +84,7 @@ colorsSelect.innerHTML = Object.keys(colorBoxes).reduce((options, color) => {
 }, '')
 
 form.appendChild(colorsSelect)
-document.body.appendChild(organizer);
+form.insertAdjacentElement('afterend', organizer);
 Object.values(colorBoxes).forEach((div) => organizer.append(div))
 
 colorsSelect.addEventListener('change', (event) => {
