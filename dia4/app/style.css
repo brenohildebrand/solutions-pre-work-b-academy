@@ -49,3 +49,7 @@ th {
 td {
   padding: 15px;
 }
+
+th, td {
+  text-align: center;
+}
