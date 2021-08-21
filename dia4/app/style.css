@@ -6,3 +6,46 @@ body {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+
+  text-align: left;
+
+  max-width: 27vw;
+  margin: auto;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 5px;
+  margin-bottom: 32px;
+}
+
+button {
+  align-self: center;
+
+  padding: 10px;
+  min-width: 100px;
+  max-width: 20vw;
+
+  margin: 30px auto 60px auto;
+}
+
+table {
+  margin: 30px auto 100px auto;
+  min-width: 68vw;
+}
+
+th {
+  padding: 15px;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+td {
+  padding: 15px;
+}
