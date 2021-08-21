@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dia 4</title>
+  </head>
+  <body>
+    <form data-js="car-form">
+      <label for="url">Imagem (URL)</label>
+      <input type="url" id="url" data-js="url" />
+
+      <label for="marca">Marca</label>
+      <input type="text" id="marca" data-js="marca" />
+
+      <label for="modelo">Modelo</label>
+      <input type="text" id="modelo" data-js="modelo" />
+
+      <label for="ano">Ano</label>
+      <input type="number" id="ano" data-js="ano" />
+
+      <label for="placa">Placa</label>
+      <input type="text" id="placa" data-js="placa" />
+
+      <label for="cor">Cor</label>
+      <input type="text" id="cor" data-js="cor" />
+
+      <button type="submit" data-js="submit">Enviar</button>
+    </form>
+    <table data-js="table">
+      <thead>
+        <tr>
+          <th>URL</th>
+          <th>Marca</th>
+          <th>Modelo</th>
+          <th>Ano</th>
+          <th>Placa</th>
+          <th>Cor</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
