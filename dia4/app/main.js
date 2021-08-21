@@ -32,6 +32,27 @@ const addCar = function (car) {
     tableRow.appendChild(cell);
   })
 
+  const cell = document.createElement('td')
+  const img = document.createElement('img')
+  img.setAttribute('src', '/delete.png')
+  img.style.width = '30px'
+  cell.appendChild(img)
+  tableRow.appendChild(cell);
+
+  img.addEventListener('click', async function (event) {
+    const res = await deregisterCar(car);
+    const { error, message } = res
+
+    if(error) throwMessage(message, 'failure')
+    else {
+      throwMessage(message, 'success')
+      tableRow.remove()
+
+      if(table.children[1].children.length === 0)
+        addMessage('Nenhum carro encontrado')
+    }
+  }, { once: true })
+
   table.children[1].appendChild(tableRow);
 }
 
@@ -52,6 +73,19 @@ const registerCar = async function (car) {
     mode: 'cors',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(car)
+  })
+  .then(res => res.json())
+
+  return res
+}
+
+const deregisterCar = async function (car) {
+
+  const res = await fetch('http://localhost:3333/cars', {
+    method: 'DELETE',
+    mode: 'cors',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ plate: car.plate })
   })
   .then(res => res.json())
 
